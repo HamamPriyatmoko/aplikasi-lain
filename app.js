@@ -62,4 +62,11 @@ function cobaSaja() {
 var mencoba = cobaSaja(1, 2, 3, 4);
 console.log(mencoba);
 
+function mencobarekursif(a) {
+  if (a === 10) return;
+  console.log(a);
+  return mencobarekursif(a + 1); //Ini adalah rekursif
+}
+
+mencobarekursif(1);
 // alert(volumeKubus(8, 4));
