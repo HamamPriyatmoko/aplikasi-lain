@@ -95,7 +95,7 @@ var arr = ['Hamam', 'Silvy', 'Ahmad', 'Mohtar'];
 //   console.log(e);
 // });
 
-var penumpangAngkot = ['Hamam', undefined, 'Arum'];
+var penumpangAngkot = ['Hamam', undefined, 'Silvya'];
 var tambahPenumpang = function (namaPenumpang, penumpang) {
   var penumpangTurun = penumpang.findIndex((element) => element === undefined);
   if (penumpang.includes(namaPenumpang)) {
@@ -108,6 +108,20 @@ var tambahPenumpang = function (namaPenumpang, penumpang) {
     }
   }
   console.log(penumpang);
+};
+
+var hapusPenumpang = function (namaPenumpang, kursi) {
+  if (kursi.length == 0) {
+    console.log('Angkot Kosong');
+  } else {
+    if (kursi.includes(namaPenumpang)) {
+      var index = kursi.indexOf(namaPenumpang);
+      kursi.splice(index, 1);
+      return kursi;
+    } else {
+      console.log('Penumpang Tidak Ada');
+    }
+  }
 };
 
 // var tambahPenumpang2 = function (namaPenumpang, kursi) {
