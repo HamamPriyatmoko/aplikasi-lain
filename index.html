@@ -6,6 +6,27 @@
     <title>Percobaan</title>
   </head>
   <body>
+    <style>
+      footer img {
+        animation: glow 1.5s infinite alternate;
+      }
+
+      @keyframes glow {
+        from {
+          filter: drop-shadow(0px 0px 5px #00d4ff);
+        }
+        to {
+          filter: drop-shadow(0px 0px 15px #00d4ff);
+        }
+      }
+    </style>
     <script src="app.js"></script>
+    <footer style="background: #0a192f; color: white; text-align: center; padding: 20px">
+      <div style="display: flex; justify-content: center; align-items: center">
+        <img src="https://cdn-icons-png.flaticon.com/512/6009/6009756.png" width="60" height="60" alt="Blockchain Icon" />
+        <p style="margin-left: 15px">Sistem verifikasi sertifikat berbasis blockchain untuk keamanan dan transparansi.</p>
+      </div>
+      <p>&copy; 2025 Blockchain Certificate | Semua Hak Dilindungi</p>
+    </footer>
   </body>
 </html>
