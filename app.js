@@ -113,6 +113,7 @@ var tambahPenumpang = function (namaPenumpang, penumpang) {
 var hapusPenumpang = function (namaPenumpang, kursi) {
   if (kursi.length == 0) {
     console.log('Angkot Kosong');
+    return kursi;
   } else {
     if (kursi.includes(namaPenumpang)) {
       var index = kursi.indexOf(namaPenumpang);
@@ -120,6 +121,7 @@ var hapusPenumpang = function (namaPenumpang, kursi) {
       return kursi;
     } else {
       console.log('Penumpang Tidak Ada');
+      return kursi;
     }
   }
 };
@@ -142,3 +144,56 @@ var hapusPenumpang = function (namaPenumpang, kursi) {
 //     }
 //   }
 // };
+
+// var a;
+// function apaja() {
+//   console.log(this.a);
+//   //this berarti merupakan variable dari scope global
+// }
+
+// var obj = {};
+// obj.halo = function () {
+//   console.log('Halo Dunia');
+// };
+// obj.halo();
+
+// function Objek(nama) {
+//   this.nama = nama;
+//   console.log(this);
+//   //this merupakan scope dari objek
+// }
+// var obj1 = new Objek('hamam');
+// var obj2 = new Objek();
+
+function Angkot(namaSopir, trayek, penumpang, kas) {
+  this.namaSopir = namaSopir;
+  this.trayek = trayek;
+  this.penumpang = penumpang;
+  this.kas = kas;
+
+  this.penumpangNaik = function (namaPenumpang) {
+    this.penumpang.push(namaPenumpang);
+    return this.penumpang;
+  };
+
+  this.penumpangTurun = function (namaPenumpang, bayar) {
+    if (this.penumpang.length == 0) {
+      console.log('Angkot Kosong');
+      return false;
+    }
+    for (var i = 0; i < this.penumpang.length; i++) {
+      if (this.penumpang[i] == namaPenumpang) {
+        this.penumpang[i] = undefined;
+        // this.penumpang.push(bayar);
+        this.kas += bayar;
+        return this.penumpang;
+      }
+    }
+  };
+  // this.penumpangTurun = function(){
+  //   this.penumpang.pop();
+  // }
+}
+
+var angkot1 = new Angkot('Hamam', ['Tegal', 'Yogyakarta'], [], 0);
+var angkot2 = new Angkot('Saitama', ['Surabaya', 'Yogyakarta'], [], 0);
