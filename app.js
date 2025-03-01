@@ -73,6 +73,7 @@
 
 // Array merupakan objek di dalam javascript
 var arr = ['Hamam', 'Silvy', 'Ahmad', 'Mohtar'];
+var arr2 = [1, 2, 3, 4, 5];
 
 // arr[4] = 'alam'; Bisa untuk menambahkan
 // arr.push('Mohammad'); Menambahkan data di index terakhir menggunakan method dari objek array
@@ -93,7 +94,8 @@ var arr = ['Hamam', 'Silvy', 'Ahmad', 'Mohtar'];
 // console.log(arr.join());
 // arr.forEach((e, i) => {
 //   console.log(e);
-// });
+// }); mengembalikan nilai string
+// arr2.map((e) => console.log(e * 2)); mengembalikan nilai array/number
 
 var penumpangAngkot = ['Hamam', undefined, 'Silvya'];
 var tambahPenumpang = function (namaPenumpang, penumpang) {
@@ -197,3 +199,23 @@ function Angkot(namaSopir, trayek, penumpang, kas) {
 
 var angkot1 = new Angkot('Hamam', ['Tegal', 'Yogyakarta'], [], 0);
 var angkot2 = new Angkot('Saitama', ['Surabaya', 'Yogyakarta'], [], 0);
+
+//Dom
+//getElementById() menghasilkan element
+//getElementsByClassName() menghasilkan array HtmlCollection
+//getElementsByTagName() menghasilkan array HtmlCollection
+
+//document.querySelector() mengambil selector yang ada dicss dan mengembalikan element
+// const p4 = document.querySelector('#b p');
+// p4.style.color = 'red';
+// p4.style.backgroundColor = 'orange';
+// p4.style.fontSize = '30px';
+
+// const li2 = document.querySelector('section#b ul li:nth-child(2)');
+// li2.style.backgroundColor = 'blue';
+
+//document.querySelectorAll() mengembalikan node list
+const p = document.querySelectorAll('p');
+for (let i = 0; i < p.length; i++) {
+  p[i].style.color = 'red';
+}
