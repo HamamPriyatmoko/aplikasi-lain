@@ -215,7 +215,13 @@ var angkot2 = new Angkot('Saitama', ['Surabaya', 'Yogyakarta'], [], 0);
 // li2.style.backgroundColor = 'blue';
 
 //document.querySelectorAll() mengembalikan node list
-const p = document.querySelectorAll('p');
-for (let i = 0; i < p.length; i++) {
-  p[i].style.color = 'red';
-}
+// const p = document.querySelectorAll('p');
+// for (let i = 0; i < p.length; i++) {
+//   p[i].style.color = 'red';
+// }
+
+//document adalah node root
+//mempersempit node root
+const sectionb = document.getElementById('b');  
+const p4 = sectionb.querySelector('p');
+p4.style.color = 'red';
