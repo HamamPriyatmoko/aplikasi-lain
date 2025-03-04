@@ -204,8 +204,9 @@ var angkot2 = new Angkot('Saitama', ['Surabaya', 'Yogyakarta'], [], 0);
 //getElementById() menghasilkan element
 //getElementsByClassName() menghasilkan array HtmlCollection
 //getElementsByTagName() menghasilkan array HtmlCollection
-
 //document.querySelector() mengambil selector yang ada dicss dan mengembalikan element
+//document.querySelectorAll() mengembalikan node list
+
 // const p4 = document.querySelector('#b p');
 // p4.style.color = 'red';
 // p4.style.backgroundColor = 'orange';
@@ -214,7 +215,6 @@ var angkot2 = new Angkot('Saitama', ['Surabaya', 'Yogyakarta'], [], 0);
 // const li2 = document.querySelector('section#b ul li:nth-child(2)');
 // li2.style.backgroundColor = 'blue';
 
-//document.querySelectorAll() mengembalikan node list
 // const p = document.querySelectorAll('p');
 // for (let i = 0; i < p.length; i++) {
 //   p[i].style.color = 'red';
@@ -222,6 +222,38 @@ var angkot2 = new Angkot('Saitama', ['Surabaya', 'Yogyakarta'], [], 0);
 
 //document adalah node root
 //mempersempit node root
-const sectionb = document.getElementById('b');  
-const p4 = sectionb.querySelector('p');
-p4.style.color = 'red';
+// const sectionb = document.getElementById('b');
+// const p4 = sectionb.querySelector('p');
+// p4.style.color = 'red';
+
+var arr = ['Hamam', 'Dono', 'Silvya', 'Biyan', 'Johan'];
+const ul = document.getElementsByTagName('ul')[0];
+// for (let i = 0; i < arr.length; i++) {
+//   ul.innerHTML += `<li>${arr[i]}</li>`; //manipulasi Dom
+// }
+ul.innerHTML = arr.map((e) => `<li>${e}</li>`).join('');
+var a = arr2.map((e) => {
+  console.log(e);
+});
+
+//element.style.<properti css>
+//element.setAtributte() untuk memanipulasi/menambahkan atribut seperti id,class,href, dll dalam element html
+//element.getAttribute() untuk membaca atribut apa yang ada di dalam sebuah element
+//element.removeAttribute() untuk menghapus
+
+//element.classList untuk memanipulasi sebuah class dalam element dan ada pula method classList
+//add() untuk menambahkan class
+//remove() untuk menghapus class
+//toggle() untuk menambahkan atau menghapus class
+//contains() untuk mengecek apakah class ada di dalam element
+//replace() untuk mengganti class
+//element.classList.add('active');
+
+const judul = document.getElementsByTagName('h1')[0];
+// judul.setAttribute('id', 'boleeeee');
+judul.setAttribute('class', 'judul');
+
+var submit = function () {
+  const ubahwarna = document.getElementsByTagName('button')[0];
+  ubahwarna.classList.toggle('submit');
+};
