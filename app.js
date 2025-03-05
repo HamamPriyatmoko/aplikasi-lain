@@ -200,7 +200,7 @@ function Angkot(namaSopir, trayek, penumpang, kas) {
 var angkot1 = new Angkot('Hamam', ['Tegal', 'Yogyakarta'], [], 0);
 var angkot2 = new Angkot('Saitama', ['Surabaya', 'Yogyakarta'], [], 0);
 
-//Dom
+//Dom Selection
 //getElementById() menghasilkan element
 //getElementsByClassName() menghasilkan array HtmlCollection
 //getElementsByTagName() menghasilkan array HtmlCollection
@@ -226,17 +226,18 @@ var angkot2 = new Angkot('Saitama', ['Surabaya', 'Yogyakarta'], [], 0);
 // const p4 = sectionb.querySelector('p');
 // p4.style.color = 'red';
 
-var arr = ['Hamam', 'Dono', 'Silvya', 'Biyan', 'Johan'];
-const ul = document.getElementsByTagName('ul')[0];
+var arr1 = ['Hamam', 'Dono', 'Silvya', 'Biyan', 'Johan'];
+// const ul = document.getElementsByTagName('ul')[0];
 // for (let i = 0; i < arr.length; i++) {
 //   ul.innerHTML += `<li>${arr[i]}</li>`; //manipulasi Dom
 // }
-ul.innerHTML = arr.map((e) => `<li>${e}</li>`).join('');
-var a = arr2.map((e) => {
-  console.log(e);
-});
-
+// ul.innerHTML = arr1.map((e) => `<li>${e}</li>`).join('');
+// var a = arr2.map((e) => {
+//   console.log(e);
+// });
 //element.style.<properti css>
+
+//Dom Manipulation
 //element.setAtributte() untuk memanipulasi/menambahkan atribut seperti id,class,href, dll dalam element html
 //element.getAttribute() untuk membaca atribut apa yang ada di dalam sebuah element
 //element.removeAttribute() untuk menghapus
@@ -257,3 +258,56 @@ var submit = function () {
   const ubahwarna = document.getElementsByTagName('button')[0];
   ubahwarna.classList.toggle('submit');
 };
+
+//buat elemen baru
+// const pBaru = document.createElement('p');
+// const text = document.createTextNode('Paragraf Baru');
+
+//simpan tulisan kedalam paragraf
+// pBaru.appendChild(text);
+
+//menyimpan pbaru di akhir Section A
+// const sectionA = document.getElementById('a');
+// sectionA.appendChild(pBaru);
+
+// const liBaru = document.createElement('li');
+// const textLi = document.createTextNode('Hallo Semuanya');
+
+// liBaru.appendChild(textLi);
+
+// const ul = document.querySelector('ul');
+// const li2 = ul.querySelector('li:nth-child(2)');
+
+// ul.insertBefore(liBaru, li2);
+
+// const link = document.getElementsByTagName('a')[0];
+// sectionA.removeChild(link);
+
+// const h1 = document.createElement('h1');
+// const textH1 = document.createTextNode('Judul Baru');
+
+// h1.appendChild(textH1);
+// const sectionb = document.getElementById('b');
+// const p4 = sectionb.querySelector('p');
+// sectionb.replaceChild(h1, p4);
+
+// parentnode.append()
+// parentnode.prepend()
+// childnode.before()
+// childnode.after()
+// childnode.remove()
+// childnode.replaceWith()
+// childnode.contains()
+
+// const buttonS = document.getElementsByTagName('button')[0];
+// const pbaru = document.querySelector('section#b p');
+
+// buttonS.onclick = ()=>{}
+
+// buttonS.addEventListener('mouseover', () => {
+//   pbaru.style.backgroundColor = 'red';
+// });
+
+// perbedaan antara event handler dan event listener adalah jika menggunakan 2 method event handler yang
+// sama maka akan saling menimpa tetapi jika menggunakan event listener dengan 2 method yang sama tidak
+// akan saling menimpa
