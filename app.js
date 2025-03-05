@@ -311,3 +311,18 @@ var submit = function () {
 // perbedaan antara event handler dan event listener adalah jika menggunakan 2 method event handler yang
 // sama maka akan saling menimpa tetapi jika menggunakan event listener dengan 2 method yang sama tidak
 // akan saling menimpa
+
+// Event List
+// Mouse Event
+    // click, dblclick, mouseover, mouseenter, mouseup, wheel
+// Keyboard Event
+    // keydown, keyup, keypress
+// Focus Event
+// Resources Event
+// View Event
+    // resize, scroll
+// Mutation Event
+// Form Event
+    // reset, submit
+// Css Animation & Transition Event
+// Darg & Drop Event
